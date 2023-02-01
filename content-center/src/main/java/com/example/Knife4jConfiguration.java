@@ -17,7 +17,7 @@ public class Knife4jConfiguration {
     public Docket defaultApi2() {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        .title("学习微服务项目内容中心后端接口文档")
+                        .title("内容中心接口文档")
                         .description("内容中心微服务接口")
                         .termsOfServiceUrl("http://www.zengshen.com")
                         .contact("曾深")

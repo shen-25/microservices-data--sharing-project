@@ -1,4 +1,4 @@
-package com.example.dao.notice;
+package com.example.domain.dto.notice;
 
 import com.example.domain.entity.notice.Notice;
 import tk.mybatis.mapper.common.Mapper;

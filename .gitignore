@@ -1,6 +1,8 @@
-/user-center/.idea/
+*.idea
+*.iml
+
+
 /user-center/target/
 
-/content-center/.idea/
 /content-center/target/
 
