@@ -17,6 +17,14 @@ spring:
       pool-name: DataSourceHikariCP           # 连接池的名字
       max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
       connection-test-query: SELECT 1
-
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#        namespace: 4a62abd7-e86d-447f-9dbb-5c844988d996
+        cluster-name: NJ
+        metadata:
+          version: v1
+  application:
+    name: user-center
 
