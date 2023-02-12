@@ -5,19 +5,12 @@ import com.example.dao.share.ShareMapper;
 import com.example.domain.dto.content.ShareDTO;
 import com.example.domain.dto.user.UserDTO;
 import com.example.domain.entity.share.Share;
+import com.example.feignclient.UserCenterFeignClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 
@@ -32,8 +25,11 @@ public class ShareService {
 //    private DiscoveryClient discoveryClient;
 
 
+//    @Autowired
+//    private RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    private UserCenterFeignClient userCenterFeignClient;
 
     public ShareDTO findById(Integer id) {
         Share share =  shareMapper.selectByPrimaryKey(id);
@@ -44,8 +40,11 @@ public class ShareService {
         // .collect(Collectors.toList());
         // int i = ThreadLocalRandom.current().nextInt(targetURL.size());
         // log.info("请求的地址：[{}]", targetURL.get(i));
-        UserDTO userDTO = this.restTemplate.getForObject("http://user-center/users/{id}",
-                UserDTO.class, userId);
+//        UserDTO userDTO = this.restTemplate.getForObject("http://user-center/users/{id}",
+//                UserDTO.class, userId);
+
+        // feign
+        UserDTO userDTO = userCenterFeignClient.findById(id);
 
         //消息装配
 

@@ -30,4 +30,9 @@ public class TestController {
         return  user;
     }
 
+    @GetMapping("q")
+    public Object q(User user) {
+        return  user;
+    }
+
 }
