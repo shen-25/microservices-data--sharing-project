@@ -1,8 +1,6 @@
 server:
   port: 8081
 
-
-
 spring:
   datasource:                                     # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource      # 数据源的类型，可以更改为其他的数据源配置，比如druid
@@ -23,6 +21,11 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      # 将其配置为 false 即可根据不同的URL 进行链路限流，如果不配置将不会生效。
+
   application:
     name: content-center
 
@@ -48,6 +51,11 @@ feign:
     config:
       user-center:
         loggerLevel: full
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 
 

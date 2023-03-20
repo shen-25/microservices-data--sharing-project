@@ -28,7 +28,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
 
+        </dependency>
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
@@ -63,7 +67,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR1</version>
+                <version>Hoxton.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -79,32 +83,7 @@
     </dependencyManagement>
 
     <build>
-    <plugins>
-        <plugin>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>1.4.1</version>
-            <configuration>
-                <configurationFile>
-                    ${basedir}/src/main/resources/generator/generatorConfig.xml
-                </configurationFile>
-                <overwrite>true</overwrite>
-                <verbose>true</verbose>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>mysql</groupId>
-                    <artifactId>mysql-connector-java</artifactId>
-                    <version>8.0.28</version>
-                </dependency>
-                <dependency>
-                    <groupId>tk.mybatis</groupId>
-                    <artifactId>mapper</artifactId>
-                    <version>4.2.2</version>
-                </dependency>
-            </dependencies>
-        </plugin>
-    </plugins>
+
     </build>
 
 </project>
