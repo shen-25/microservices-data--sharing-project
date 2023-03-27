@@ -22,9 +22,12 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
     sentinel:
+      # 关闭对spring mvc端点的保护
+      filter:
+        enabled: true
       transport:
         dashboard: localhost:8080
-      # 将其配置为 false 即可根据不同的URL 进行链路限流，如果不配置将不会生效。
+
 
   application:
     name: content-center
@@ -47,6 +50,9 @@ logging:
     com.example.feignclient.UserCenterFeignClient: debug
 
 feign:
+#  sentinel:
+#    # 为feign整合sentinel
+#    enabled: true
   client:
     config:
       user-center:
@@ -56,6 +62,11 @@ management:
     web:
       exposure:
         include: '*'
+
+resttemplate:
+  # 关闭@SentinelRestTemplate注解
+  sentinel:
+    enabled: false
 
 
 

@@ -1,6 +1,7 @@
 package com.example;
 
 
+import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -25,6 +26,7 @@ public class Application {
 
     @Bean
     @LoadBalanced
+    @SentinelRestTemplate
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
