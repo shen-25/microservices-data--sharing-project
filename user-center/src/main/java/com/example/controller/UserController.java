@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
@@ -25,7 +26,9 @@ public class UserController {
 
     @GetMapping("/{id}")
     @ApiOperation(value = "根据用户id")
-    public User findById(@PathVariable Integer id) {
+    public User findById(@PathVariable Integer id,HttpServletRequest request) {
+        System.out.println(request);
+
         return userService.findById(id);
     }
 
