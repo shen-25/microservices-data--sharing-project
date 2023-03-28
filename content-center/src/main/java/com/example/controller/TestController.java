@@ -18,13 +18,16 @@ import com.example.service.content.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.validation.Valid;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +37,8 @@ import java.util.List;
  */
 @RestController
 @Slf4j
+// 动态刷新nacos配置
+@RefreshScope
 public class TestController {
 
     @Autowired
@@ -83,13 +88,13 @@ public class TestController {
     @GetMapping("/test-b")
     public Object testB() {
         testService.common();
-        return "test-b" ;
+        return "test-b";
     }
 
     @GetMapping("/test-hot")
     @SentinelResource("hot")
     public Object testHot(@RequestParam(required = false) String a,
-                           @RequestParam(required = false) String b) {
+                          @RequestParam(required = false) String b) {
 
         return a + " " + b;
     }
@@ -101,7 +106,7 @@ public class TestController {
     }
 
     @GetMapping("test-sentinel-api")
-    public String testSentinelApi(@RequestParam(required = false) String a)  {
+    public String testSentinelApi(@RequestParam(required = false) String a) {
         String resourceName = "test-sentinel-api";
         // 定义来源
         ContextUtil.enter(resourceName, "test-wfw");
@@ -112,7 +117,7 @@ public class TestController {
                 throw new IllegalArgumentException("a不能为空");
             }
             return a;
-        }  catch (BlockException blockException) {
+        } catch (BlockException blockException) {
             // 资源访问阻止，被限流或被降级
             // 在此处进行相应的处理操作
             log.warn("限流或者被降级了");
@@ -127,6 +132,7 @@ public class TestController {
 
     /**
      * 指定block调用的方法和调用方法的类
+     *
      * @param a
      * @return
      */
@@ -134,15 +140,15 @@ public class TestController {
     @SentinelResource(value = "test-sentinel",
             blockHandler = "block",
             blockHandlerClass = BlockHandler.class,
-    fallback = "fallback")
-    public String testSentinel(@RequestParam(required = false) String a)  {
+            fallback = "fallback")
+    public String testSentinel(@RequestParam(required = false) String a) {
         if (StringUtils.isBlank(a)) {
             throw new IllegalArgumentException("a不能为空");
         }
         return a;
     }
 
-//    public String block(String a, BlockException e) {
+    //    public String block(String a, BlockException e) {
 //        log.warn("限流或者被降级了", e);
 //        return "被限流或被降级";
 //    }
@@ -167,10 +173,17 @@ public class TestController {
     private RestTemplate restTemplate;
 
     @GetMapping("/test-rest-template")
-    public UserDTO test(@RequestParam Integer userId){
+    public UserDTO test(@RequestParam Integer userId) {
         UserDTO forObject = this.restTemplate.
                 getForObject("http://user-center/users/{userId}", UserDTO.class, userId);
         return forObject;
     }
 
+    @Value("${your.config}")
+    private String yourConfig;
+
+    @GetMapping("/nacos-config")
+    public String yourConf() {
+        return yourConfig;
+    }
 }

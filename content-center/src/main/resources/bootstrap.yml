@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        # 1.第一种方式
+        # 共享配置
+        shared-configs: common1.yaml,common2.yaml
+        # 那些共享配置支持动态刷新
+        refreshable-dataids: common1.yaml
+        # 2.第二种方式
+        extension-configs:
+          - data-id: xxx.yaml
+              group: ${xxx-nacos-group}
+              refresh: true
+
+  application:
+    name: content-center
+
+  profiles:
+    active: dev
+
