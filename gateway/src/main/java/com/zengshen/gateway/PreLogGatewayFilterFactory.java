@@ -17,7 +17,6 @@ public class PreLogGatewayFilterFactory  extends AbstractNameValueGatewayFilterF
     public GatewayFilter apply(NameValueConfig config) {
         return (exchange, chain) -> {
             log.info("请求进来了, {}, {}", config.getName(), config.getValue());
-
             ServerHttpRequest modified = exchange.getRequest()
                     .mutate().build();
             ServerWebExchange buildExchange = exchange.mutate().request(modified).build();

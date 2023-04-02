@@ -1,6 +1,6 @@
 package com.example.feignclient;
 
-import com.example.domain.dto.user.UserDTO;
+import com.example.domain.dto.UserDTO;
 import org.springframework.stereotype.Component;
 
 @Component

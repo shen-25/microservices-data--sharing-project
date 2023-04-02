@@ -10,10 +10,10 @@ spring:
         # 那些共享配置支持动态刷新
         refreshable-dataids: common1.yaml
         # 2.第二种方式
-        extension-configs:
-          - data-id: xxx.yaml
-              group: ${xxx-nacos-group}
-              refresh: true
+#        extension-configs:
+#          - data-id: xxx.yaml
+#              group: ${xxx-nacos-group}
+#              refresh: true
 
   application:
     name: content-center

@@ -17,6 +17,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @MapperScan("com.example")
 @EnableDiscoveryClient
+// 在该服务的启动类中添加,以此来开启Feign的功能
 @EnableFeignClients
 public class Application {
     public static void main(String[] args) {

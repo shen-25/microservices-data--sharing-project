@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8082
 
 spring:
   datasource:                                     # 数据源的相关配置
@@ -9,22 +9,16 @@ spring:
     username: root
     password: 123456
     hikari:
-      connection-timeout: 30000               # 等待连接池分配连接的最大时间（毫秒），超过这个时长还没有可用的连接，则会抛出SQLException
-      minimum-idle: 5                         # 最小连接数
       maximum-pool-size: 20                   # 最大连接数
-      auto-commit: true                       # 自动提交
-      idle-timeout: 600000                  # 连接超时的最大时长（毫秒），超时则会被释放（retired）
-      pool-name: DataSourceHikariCP           # 连接池的名字
-      max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
-      connection-test-query: SELECT 1
+
   cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
-#        namespace: 4a62abd7-e86d-447f-9dbb-5c844988d996
-        cluster-name: NJ
-        metadata:
-          version: v1
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+#          namespace: 4a62abd7-e86d-447f-9dbb-5c844988d996
+          cluster-name: NJ
+          metadata:
+            version: v1
   application:
     name: user-center
 

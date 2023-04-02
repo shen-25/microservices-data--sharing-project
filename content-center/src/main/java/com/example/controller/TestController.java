@@ -10,11 +10,10 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
-import com.example.controller.content.BlockHandler;
-import com.example.domain.dto.user.UserDTO;
+import com.example.domain.dto.UserDTO;
 import com.example.feignclient.TestBaiduFeignClient;
 import com.example.feignclient.TestUserCenterFeignClient;
-import com.example.service.content.TestService;
+import com.example.service.TestService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,18 +26,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.validation.Valid;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author word
  */
-@RestController
+//@RestController
 @Slf4j
 // 动态刷新nacos配置
-@RefreshScope
+//@RefreshScope
 public class TestController {
 
     @Autowired

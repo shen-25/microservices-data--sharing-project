@@ -12,18 +12,43 @@ spring:
       # 让gateway通过服务发现组件找到其他的服务
       routes:
         - id: after_route
+          # 访问http://localhost:8840/users/1 -> user-center/users/1
           uri: lb://user-center
+          # predicates 符合添加才放行
           predicates:
             - After=2017-01-20T17:42:47.789-07:00[America/Denver]
-            # 自定义TimeBetween谓词规则
-            - TimeBetween=上午9:00,下午10:00
+            # 自定义TimeBetween谓词规则 对应类 TimeBetweenRoutePredicateFactory
+            - TimeBetween=上午9:00,下午11:00
+          # filters 请求加点东西，例如请求头添加 (key=X-Request-Zeng,value=Shen)
           filters:
             # 请求添加header, key, value
             - AddRequestHeader=X-Request-Zeng, Shen
+            # 自定义过滤器规则 对应类 PreLogGatewayFilterFactory
             - PreLog=a,b
+            # 令牌算法限流
+            - name: RequestRateLimiter
+              args:
+                # 令牌桶每秒填充平均速率
+                redis-rate-limiter.replenishRate: 1
+                # 令牌桶的上限
+                redis-rate-limiter.burstCapacity: 2
+                # 使用SpEL表达式从Spring容器中获取Bean对象
+                key-resolver: "#{@pathKeyResolver}"
+
+#        - id: test-center
+#          uri: http://localhost:8082
+#          predicates:
+#            # 当且仅当请求时的时间After配置的时间时，才会转发到用户微服务
+#            - After=2010-01-20T17:42:47.789-07:00[America/Denver]
       discovery:
         locator:
           enabled: true
+  redis:
+    port: 6379
+    host: zengshen.org
+    password: 123456
+
+
 
 management:
   endpoints:
