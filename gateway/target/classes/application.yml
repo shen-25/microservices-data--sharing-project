@@ -26,6 +26,7 @@ spring:
             # 自定义过滤器规则 对应类 PreLogGatewayFilterFactory
             - PreLog=a,b
             # 令牌算法限流
+            # 在Spring Cloud Gateway中默认提供了 RequestRateLimiter 过滤器来实现限流操作。
             - name: RequestRateLimiter
               args:
                 # 令牌桶每秒填充平均速率
