@@ -6,3 +6,6 @@
 
 /content-center/target/
 
+/spring-boot-admin/target/
+
+/gateway/target/

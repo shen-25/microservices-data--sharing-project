@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5fb26d-59e2-41b1-ac85-f278fb6e57f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-admin/src/main/java/com/zengshen/admin/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-admin/src/main/java/com/zengshen/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680841857460</updated>
       <workItem from="1680841859152" duration="914000" />
+      <workItem from="1680842796309" duration="295000" />
     </task>
     <servers />
   </component>
@@ -103,5 +100,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
