@@ -8,9 +8,9 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @SpringBootApplication
 @MapperScan("com.example")
-public class Application {
+public class UserCenterApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(UserCenterApplication.class, args);
     }
 }
 

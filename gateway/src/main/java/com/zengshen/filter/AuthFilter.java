@@ -18,7 +18,7 @@ import java.lang.annotation.Annotation;
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
 
-@Component
+//@Component
 public class AuthFilter implements GlobalFilter, Ordered {
 
 

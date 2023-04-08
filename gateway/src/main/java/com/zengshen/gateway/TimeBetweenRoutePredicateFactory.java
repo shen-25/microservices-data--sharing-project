@@ -15,7 +15,7 @@ import java.util.function.Predicate;
 /**
  * @author word
  */
-@Component
+//@Component
 public class TimeBetweenRoutePredicateFactory extends AbstractRoutePredicateFactory<TimeBetweenConfig> {
 
     public TimeBetweenRoutePredicateFactory() {

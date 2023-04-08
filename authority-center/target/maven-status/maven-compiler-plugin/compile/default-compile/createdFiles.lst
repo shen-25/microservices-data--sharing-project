@@ -1,0 +1,7 @@
+com\example\authority\constant\AuthorityConstant.class
+com\example\authority\service\impl\JWTServiceImpl.class
+com\example\authority\entity\TEcommerceUser.class
+com\example\authority\service\JWTService.class
+com\example\authority\controller\AuthorityController.class
+com\example\authority\mapper\TEcommerceUserMapper.class
+com\example\authority\AuthorityCenterApplication.class

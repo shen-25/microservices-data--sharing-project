@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  # 不是重点的配置放在dev
+  profiles:
+    active: dev
+  application:
+    name: authority-center
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

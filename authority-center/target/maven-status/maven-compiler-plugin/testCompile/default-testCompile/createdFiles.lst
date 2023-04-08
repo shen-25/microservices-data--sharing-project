@@ -1,0 +1,3 @@
+com\example\authority\service\impl\JWTServiceTest.class
+com\example\authority\AuthorityCenterApplicationTest.class
+com\example\authority\service\RSATest.class

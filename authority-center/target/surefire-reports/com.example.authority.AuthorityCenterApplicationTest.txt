@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.example.authority.AuthorityCenterApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.965 s <<< FAILURE! - in com.example.authority.AuthorityCenterApplicationTest
+test  Time elapsed: 0.929 s  <<< ERROR!
+org.springframework.dao.DuplicateKeyException: 
+
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zengshen.com' for key 't_ecommerce_user.username'
+### The error may exist in file [E:\java-web-project\microservices-data--sharing-project\authority-center\target\classes\mapping\TEcommerceUserMapper.xml]
+### The error may involve com.example.authority.mapper.TEcommerceUserMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into t_ecommerce_user (username, `password`, extra_info,        create_time, update_time)     values (?, ?, ?,        ?, ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zengshen.com' for key 't_ecommerce_user.username'
+; Duplicate entry 'zengshen.com' for key 't_ecommerce_user.username'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zengshen.com' for key 't_ecommerce_user.username'
+	at com.example.authority.AuthorityCenterApplicationTest.test(AuthorityCenterApplicationTest.java:31)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'zengshen.com' for key 't_ecommerce_user.username'
+	at com.example.authority.AuthorityCenterApplicationTest.test(AuthorityCenterApplicationTest.java:31)
+

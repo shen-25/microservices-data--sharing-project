@@ -11,12 +11,12 @@ import org.springframework.web.server.ServerWebExchange;
  * @author word
  */
 @Slf4j
-@Component
+//@Component
 public class PreLogGatewayFilterFactory  extends AbstractNameValueGatewayFilterFactory {
     @Override
     public GatewayFilter apply(NameValueConfig config) {
         return (exchange, chain) -> {
-            log.info("请求进来了, {}, {}", config.getName(), config.getValue());
+//            log.info("请求进来了, {}, {}", config.getName(), config.getValue());
             ServerHttpRequest modified = exchange.getRequest()
                     .mutate().build();
             ServerWebExchange buildExchange = exchange.mutate().request(modified).build();
