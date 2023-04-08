@@ -8,11 +8,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        namespace: ""
     gateway:
       # 开启从注册中心动态创建路由的功能
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lower-case-service-id: true #服务id设置为小写
       # 让gateway通过服务发现组件找到其他的服务
 #      routes:
@@ -22,9 +23,9 @@ spring:
 #          # predicates 符合添加才放行
 #          predicates:
 #            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
-            # 自定义TimeBetween谓词规则 对应类 TimeBetweenRoutePredicateFactory
-#            - TimeBetween=上午9:00,下午11:00
-          # filters 请求加点东西，例如请求头添加 (key=X-Request-Zeng,value=Shen)
+##             自定义TimeBetween谓词规则 对应类 TimeBetweenRoutePredicateFactory
+##            - TimeBetween=上午9:00,下午11:00
+##           filters 请求加点东西，例如请求头添加 (key=X-Request-Zeng,value=Shen)
 #          filters:
 #            # 请求添加header, key, value
 #            - AddRequestHeader=X-Request-Zeng, Shen
@@ -54,6 +55,14 @@ spring:
 #    host: zengshen.org
 #    password: 123456
 
+
+# 这个地方独立配置, 是网关的数据, 代码 GatewayConfig.java 中读取被监听
+nacos:
+  gateway:
+    route:
+      config:
+        data-id: gateway.json
+        group: DEFAULT_GROUP
 
 
 management:

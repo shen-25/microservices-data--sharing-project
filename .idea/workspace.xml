@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5fb26d-59e2-41b1-ac85-f278fb6e57f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/authority-center/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authority-center/src/main/java/com/example/authority/AuthorityCenterApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authority-center/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-admin/src/main/java/com/zengshen/admin/conf/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/content-center/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authority-center/src/main/java/com/example/authority/AuthorityCenterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authority-center/src/main/java/com/example/authority/AuthorityCenterApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/filter/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/PreLogGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/PreLogGatewayFilterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/TimeBetweenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/TimeBetweenConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/TimeBetweenRoutePredicateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/gateway/TimeBetweenRoutePredicateFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-admin/src/main/java/com/zengshen/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-admin/src/main/java/com/zengshen/admin/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/UserCenterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +50,9 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2O5E51EohAFgB363JqVRcmaVORb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="flattenPackages" value="true" />
@@ -82,7 +74,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/authority-center/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gateway/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -100,6 +92,7 @@
       <recent name="com.example.authority.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java-web-project\microservices-data--sharing-project\gateway\src\main\resources" />
       <recent name="E:\java-web-project\microservices-data--sharing-project\authority-center\src\main\resources" />
       <recent name="E:\java-web-project\microservices-data--sharing-project" />
     </key>
@@ -113,7 +106,7 @@
       <recent name="com.example.authority" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApplication">
+  <component name="RunManager" selected="Spring Boot.UserCenterApplication">
     <configuration name="ExampleConfiguration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zengshen.gateway.ExampleConfiguration" />
       <module name="gateway" />
@@ -127,13 +120,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,10 +187,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.UserCenterApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="Spring Boot.AdminApplication" />
         <item itemvalue="Spring Boot.AuthorityCenterApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.UserCenterApplication" />
         <item itemvalue="Application.ExampleConfiguration" />
       </list>
     </recent_temporary>
@@ -217,6 +212,7 @@
       <workItem from="1680862534865" duration="8744000" />
       <workItem from="1680871615591" duration="143000" />
       <workItem from="1680871924215" duration="3635000" />
+      <workItem from="1680950983410" duration="11014000" />
     </task>
     <servers />
   </component>
@@ -234,5 +230,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

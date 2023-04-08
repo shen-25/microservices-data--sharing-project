@@ -5,6 +5,8 @@ import com.example.domain.entity.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 /**
@@ -16,6 +18,9 @@ public class TestController {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private HttpServletRequest httpServletRequest;
 
     @GetMapping("test")
     public Object test() {
@@ -32,6 +37,13 @@ public class TestController {
     @GetMapping("q")
     public Object q(User user) {
         return user;
+    }
+
+    @GetMapping("user/{id}")
+    public Object q(@PathVariable String id) {
+        var httpServletRequest2 = httpServletRequest;
+        System.out.println(httpServletRequest);
+        return "你好，我是微服务用户中心 请求的路径 :" + id;
     }
 
 

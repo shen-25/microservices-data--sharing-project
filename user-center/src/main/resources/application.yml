@@ -11,6 +11,8 @@ spring:
     hikari:
       maximum-pool-size: 20                   # 最大连接数
 
+  application:
+    name: user-center
   cloud:
       nacos:
         discovery:
@@ -19,8 +21,7 @@ spring:
           cluster-name: NJ
           metadata:
             version: v1
-  application:
-    name: user-center
+
 
 management:
   endpoints:

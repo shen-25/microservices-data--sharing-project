@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 @SpringBootApplication
 @MapperScan("com.example.authority.mapper")
-public class AuthorityCentqerApplication {
+public class AuthorityCenterApplication {
     public static void main(String[] args) {
         SpringApplication.run(AuthorityCenterApplication.class, args);
 
