@@ -1,4 +1,4 @@
-package com.example.domain.entity.bonus_event_log;
+package com.example.entity;
 
 import java.util.Date;
 import javax.persistence.*;

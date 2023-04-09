@@ -1,7 +1,7 @@
-package com.example.service.user;
+package com.example.service;
 
-import com.example.dao.user.UserMapper;
-import com.example.domain.entity.user.User;
+import com.example.mapper.UserMapper;
+import com.example.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,12 +1,11 @@
 package com.example.controller;
 
-import com.example.dao.user.UserMapper;
-import com.example.domain.entity.user.User;
+import com.example.mapper.UserMapper;
+import com.example.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 /**

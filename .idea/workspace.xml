@@ -6,12 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="bb5fb26d-59e2-41b1-ac85-f278fb6e57f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authority-center/src/main/java/com/example/authority/AuthorityCenterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authority-center/src/main/java/com/example/authority/AuthorityCenterApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/zengshen/GatewayApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-center/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/dao/bonus_event_log/BonusEventLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/mapper/BonusEventLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/dao/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/domain/entity/bonus_event_log/BonusEventLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/entity/BonusEventLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/domain/entity/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/java/com/example/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/java/com/example/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/com/example/domain/dao/bonus_event_log/BonusEventLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/mapping/BonusEventLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-center/src/main/resources/com/example/domain/dao/user/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-center/src/main/resources/mapping/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +107,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java-web-project\microservices-data--sharing-project\user-center\src\main\resources\mapping" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.authority.service.impl" />
     </key>
@@ -116,19 +127,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,6 +211,12 @@
       <workItem from="1680871615591" duration="143000" />
       <workItem from="1680871924215" duration="3635000" />
       <workItem from="1680950983410" duration="11014000" />
+      <workItem from="1681003642637" duration="7710000" />
+      <workItem from="1681015920771" duration="601000" />
+      <workItem from="1681018447372" duration="4534000" />
+      <workItem from="1681023990857" duration="3592000" />
+      <workItem from="1681027806868" duration="1940000" />
+      <workItem from="1681030267557" duration="1721000" />
     </task>
     <servers />
   </component>
@@ -230,16 +234,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/user-center/src/main/java/com/example/controller/TestController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

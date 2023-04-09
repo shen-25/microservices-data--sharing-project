@@ -1,6 +1,7 @@
 server:
   port: 8840
 
+
 spring:
   application:
     name: gateway
@@ -9,6 +10,12 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
         namespace: ""
+        # Spring boot admin server访问admin client的默认地址为http://ip:port/actuator
+        #但是在我们的大部分项目中都会配置一个servlet.context-path
+        #此时admin server默认的访问地址就不对了，然后就回报错
+#        metadata:
+#          management:
+#            context-path: ${server.servlet.context-path}/actuator
     gateway:
       # 开启从注册中心动态创建路由的功能
       discovery:
@@ -48,6 +55,30 @@ spring:
 #            # 当且仅当请求时的时间After配置的时间时，才会转发到用户微服务
 #            - After=2010-01-20T17:42:47.789-07:00[America/Denver]
 
+  kafka:
+    bootstrap-servers: 192.168.93.129:9092
+    producer:
+      retries: 3
+    consumer:
+      auto-offset-reset: latest
+      group-id: 0
+  zipkin:
+    sender:
+      type: kafka # 默认是 web
+    base-url: http://localhost:9411/
+    # 让nacos知道这不是一个微服务
+    discovery-client-enabled: false
+
+  sleuth:
+    sampler:
+      #ProbabilityBasedSampler 抽样策略
+      probability: 0.1  # 采样比例, 1.0 表示 100%, 默认是 0.1
+      # RateLimitingSampler 抽样策略, 设置了限速采集, spring.sleuth.sampler.probability 属性值无效
+      rate: 1  # 每秒间隔接受的 trace 量
+
+
+  main:
+    allow-bean-definition-overriding: true  # 因为将来会引入很多依赖, 难免有重名的 bean
 
 
 #  redis:
@@ -73,3 +104,6 @@ management:
   endpoint:
     health:
       show-details: always
+
+
+
